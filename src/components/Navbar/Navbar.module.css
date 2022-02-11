@@ -1,0 +1,14 @@
+.nav {
+  grid-area: n;
+  background-color: rgb(0, 234, 255);
+  padding: 20px;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.empty {
+  text-decoration: none;
+  padding-top: 20px;
+}

@@ -1,0 +1,31 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+}
+
+.dialogsItems a {
+    padding: 10px;
+    color:rgb(255, 0, 136);
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.dialogs .messages {
+    color: rgb(195, 66, 255);
+    line-height: 50px;
+}
+
+.dialogs img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+/* .dialogsItems .active {
+    color: springgreen;
+}
+
+.messages {
+    padding: 10px;
+} */
