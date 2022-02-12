@@ -3,6 +3,7 @@ import dialogsReducer from './dialogs-reducer';
 import sidebarReducer from './sidebar-reducer';
 
 let store = {
+  // debugger;
   _state: {
     profilePage: {
       postData: [
