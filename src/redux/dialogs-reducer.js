@@ -31,18 +31,24 @@ let initialState = {
 };
 
 const dialogsReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case SEND_MESSAGE:
-            let body = state.newMessageBody;
-            state.newMessageBody = '';
-            state.messages.push({id: 5, message: body});
-            return state;
-        case UPDATE_NEW_POST_MESSAGE_BODY:
-            state.newMessageBody = action.body;
-            return state;
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case SEND_MESSAGE:
+      let body = state.newMessageBody;
+      return {
+        ...state,
+        newMessageBody: '',
+        messages: [...state.messages, {id: 5, message: body}]
+      };
+
+    case UPDATE_NEW_POST_MESSAGE_BODY:
+      return {
+        ...state,
+        newMessageBody: action.body
+      };
+
+    default:
+      return state;
+  }
 };
 
 export const sendMessageCreator = () => ({  type: SEND_MESSAGE });
